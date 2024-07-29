@@ -1,19 +1,36 @@
+import React, { useState } from "react";
 import Property1Default from "./Property1Default";
 import HyNiLnKinCaBnV from "./HyNiLnKinCaBnV";
 import PropTypes from "prop-types";
-import { useState } from "react";
-import "./KhungGopY.css"; // Import the CSS file
+import { database } from "../firebaseConfig"; // Đảm bảo đường dẫn đúng
+import { ref, push } from "firebase/database";
+import "./KhungGopY.css";
 
 const KhungGopY = ({ className = "" }) => {
   const [feedback, setFeedback] = useState("");
 
-  // Hàm để xóa nội dung trường nhập liệu
   const clearFeedback = () => {
     setFeedback("");
   };
 
+  const saveFeedback = () => {
+    const feedbackRef = ref(database, 'feedbacks');
+    push(feedbackRef, { text: feedback })
+      .then(() => {
+        console.log("Góp ý đã được lưu!");
+      })
+      .catch(error => {
+        console.error("Lỗi khi lưu góp ý:", error);
+      });
+  };
+
   const handleFeedbackChange = (e) => {
     setFeedback(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    saveFeedback();
+    clearFeedback();
   };
 
   return (
@@ -29,7 +46,7 @@ const KhungGopY = ({ className = "" }) => {
         property1DefaultPosition="absolute"
         property1DefaultTop="139px"
         property1DefaultLeft="680px"
-        onClick={clearFeedback} // Truyền hàm xóa nội dung
+        onClick={handleSubmit}
       />
       <img
         className="absolute top-[139px] left-[91px] rounded-xl w-[579px] h-[42px]"
@@ -43,7 +60,7 @@ const KhungGopY = ({ className = "" }) => {
         className="feedback-input absolute top-[139px] left-[91px] rounded-xl p-2 bg-transparent outline-none text-black"
         value={feedback}
         onChange={handleFeedbackChange}
-        placeholder="Hãy cho chúng tôi biết ý kiến của bạn"
+        placeholder="Chia sẻ ý tưởng của bạn tại đây"
       />
     </div>
   );

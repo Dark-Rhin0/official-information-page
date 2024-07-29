@@ -20,6 +20,11 @@ const Navbar = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // Cuộn về đầu trang khi component được tải
+        window.scrollTo(0, 0);
+    }, []);
+
     const handleLogoClick = () => {
         window.location.reload();
     };
