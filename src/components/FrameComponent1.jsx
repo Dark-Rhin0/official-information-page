@@ -30,21 +30,29 @@ const FrameComponent1 = ({ className = "" }) => {
         <b className="absolute top-[0px] left-[0px] text-6xl">
           <span className="[text-decoration:underline]">Liên Hệ</span> :
         </b>
-        <img
-          className="absolute top-[78px] left-[292px] w-[30px] h-[30.1px] object-cover"
-          alt=""
-          src="/fblink@2x.png"
-        />
-        <img
-          className="absolute top-[114px] left-[287px] w-[35px] h-[35px] object-cover"
-          alt=""
-          src="/removebgai-1721144744017-1@2x.png"
-        />
-        <img
-          className="absolute top-[44px] left-[292px] w-[30px] h-[30.1px] object-cover"
-          alt=""
-          src="/fblink@2x.png"
-        />
+        <a href="https://www.facebook.com/profile.php?id=100064682389065" target="_blank" rel="noopener noreferrer">
+  <img
+    className="absolute top-[78px] left-[292px] w-[30px] h-[30.1px] object-cover"
+    alt=""
+    src="/fblink@2x.png"
+  />
+        </a>
+        <a href="https://thpttranphu.hcm.edu.vn/" target="_blank" rel="noopener noreferrer">
+  <img
+    className="absolute top-[114px] left-[287px] w-[35px] h-[35px] object-cover"
+    alt=""
+    src="/removebgai-1721144744017-1@2x.png"
+  />
+</a>
+
+        <a href="https://www.facebook.com/tienphat.nguyen.5209000" target="_blank" rel="noopener noreferrer">
+  <img
+    className="absolute top-[44px] left-[292px] w-[30px] h-[30.1px] object-cover"
+    alt=""
+    src="/fblink@2x.png"
+  />
+        </a>
+
       </div>
     </div>
   );

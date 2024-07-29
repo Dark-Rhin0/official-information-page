@@ -1,11 +1,12 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 
 const Property1Default = ({
   className = "",
-  property1DefaultPosition,
-  property1DefaultTop,
-  property1DefaultLeft,
+  property1DefaultPosition = "absolute",
+  property1DefaultTop = "0px",
+  property1DefaultLeft = "0px",
+  onClick, // Hàm xử lý khi nhấn nút
 }) => {
   const property1DefaultStyle = useMemo(() => {
     return {
@@ -14,6 +15,11 @@ const Property1Default = ({
       left: property1DefaultLeft,
     };
   }, [property1DefaultPosition, property1DefaultTop, property1DefaultLeft]);
+
+  const handleClick = () => {
+    alert('Cảm ơn vì những đóng góp của bạn!'); // Hiển thị thông báo khi nhấp vào nút
+    if (onClick) onClick(); // Gọi hàm xóa nội dung nếu có
+  };
 
   return (
     <div
@@ -25,7 +31,11 @@ const Property1Default = ({
         alt=""
         src="/rectangle-5.svg"
       />
-      <b className="absolute h-[71.43%] w-[51.43%] top-[16.67%] left-[22.86%] inline-block [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.5)]" id="feedback">
+      <b
+        className="absolute h-[71.43%] w-[51.43%] top-[16.67%] left-[22.86%] inline-block [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.5)] cursor-pointer"
+        id="feedback"
+        onClick={handleClick} // Gán sự kiện onClick cho nút
+      >
         Gửi
       </b>
     </div>
@@ -36,9 +46,12 @@ Property1Default.propTypes = {
   className: PropTypes.string,
 
   /** Style props */
-  property1DefaultPosition: PropTypes.any,
-  property1DefaultTop: PropTypes.any,
-  property1DefaultLeft: PropTypes.any,
+  property1DefaultPosition: PropTypes.string,
+  property1DefaultTop: PropTypes.string,
+  property1DefaultLeft: PropTypes.string,
+
+  /** Prop để xử lý nhấp chuột */
+  onClick: PropTypes.func,
 };
 
 export default Property1Default;

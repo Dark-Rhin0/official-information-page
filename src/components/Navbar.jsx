@@ -20,9 +20,13 @@ const Navbar = () => {
         };
     }, []);
 
+    const handleLogoClick = () => {
+        window.location.reload();
+    };
+
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            <div className="navbar-logo">
+            <div className="navbar-logo" onClick={handleLogoClick}>
                 <img src="./public/logo-0-nn-2@2x.png" alt="Logo" />
                 <span>Smartgram</span>
             </div>
@@ -31,7 +35,7 @@ const Navbar = () => {
                 <li><a href="#features">Tính năng</a></li>
                 <li><a href="#feedback">Góp Ý</a></li>
                 <li><a href="#info">Thông Tin</a></li>
-                <li><a href="#login" className="login-button">log in</a></li>
+                <li><a href="http://localhost:5000" target='_blank' className="login-button">log in</a></li>
             </ul>
         </nav>
     );

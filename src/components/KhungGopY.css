@@ -1,0 +1,15 @@
+.feedback-input {
+    width: 559px; /* Điều chỉnh chiều rộng */
+    height: 22px; /* Điều chỉnh chiều cao */
+    background-color: rgba(177, 177, 177, 0.7);
+    border: 2px solid transparent;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .feedback-input:focus {
+    box-shadow: 0 0 0 2px #007bff; /* Viền xanh dương khi nhấp vào */
+    outline: none;
+  }
+.feedback-input::placeholder {
+color: #000000; /* Màu chữ placeholder */
+}
