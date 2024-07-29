@@ -7,8 +7,9 @@ const GioiThieu = ({ className = "" }) => {
     >
       <b className="absolute h-[71.98%] w-full top-[28.02%] left-[0%] inline-block [text-shadow:0px_4px_2px_rgba(0,_0,_0,_0.5)]">
         Smartgram cung cấp cho bạn một cộng đồng học tập lý tưởng, nơi mà bạn có
-        thể kết nối bạn với bạn bè và người dùng trên thế giới để cùng nhau phát
-        triển tư duy và kỹ năng học tập.
+        thể chia sẻ kiến thức, học hỏi từ bạn bè và người dùng trên
+        thế giới để cùng nhau phát
+        triển tư duy, kỹ năng học tập.
       </b>
       <div className="absolute h-[21.55%] w-[79.02%] top-[0%] right-[20.98%] bottom-[78.45%] left-[0%] text-13xl">
         <b className="absolute top-[6%] left-[0%] [text-shadow:0px_4px_3px_rgba(0,_0,_0,_0.75)]">
