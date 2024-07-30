@@ -32,7 +32,7 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="navbar-logo" onClick={handleLogoClick}>
-                <img src="./public/logo-0-nn-2@2x.png" alt="Logo" />
+                <img src="/logo-0-nn-2@2x.png" alt="Logo" />
                 <span>Smartgram</span>
             </div>
             <ul className="navbar-menu">
