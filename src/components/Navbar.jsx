@@ -40,7 +40,7 @@ const Navbar = () => {
                 <li><a href="#features">Tính năng</a></li>
                 <li><a href="#feedback">Góp Ý</a></li>
                 <li><a href="#info">Thông Tin</a></li>
-                <li><a href="http://localhost:5000" target='_blank' className="login-button">log in</a></li>
+                <li><a href="https://imaginative-mosquito-tienphat-e05715c6.koyeb.app/" className="login-button">log in</a></li>
             </ul>
         </nav>
     );
