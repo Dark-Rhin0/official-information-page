@@ -24,11 +24,17 @@ const FeaturesAndBenefits = ({ className = "" }) => {
         />
         <div className="absolute top-[89.3px] left-[117px] w-[451px] h-[162.8px]">
           <b className="absolute top-[-6.3px] left-[0px] inline-block w-[451px] h-[217px] [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
-            Smart sẽ cung cấp công cụ lịch nhằm hỗ trợ bạn trong việc lên lịch
-            cho công việc học tập lâu dài và cho phép bạn thiết lập các nhiệm vụ
-            cần làm, giúp bạn theo dõi công việc để không bỏ xót những công việc
-            quan trọng.
-          </b>
+          Chúng tôi đã thêm vào smartgram một công cụ lịch để giúp bạn dễ dàng 
+          lên kế hoạch cho công việc học tập lâu dài. 
+          Ngoài ra, bạn còn có thể tạo danh sách công việc cần làm, 
+          để theo dõi và quản lý các nhiệm vụ quan trọng mà không bỏ sót chúng.
+
+
+
+
+
+
+</b>
         </div>
         <b className="absolute top-[4.71%] left-[15.5%] text-26xl font-quantico text-forestgreen text-justify [text-shadow:0px_4px_4px_rgba(211,_0,_0,_0.73)] [-webkit-text-stroke:1px_#ff9090]">
           Lên Lịch, lập kế hoạch
@@ -49,7 +55,7 @@ const FeaturesAndBenefits = ({ className = "" }) => {
           cao hiệu quả trong công việc.
         </b>
         <b className="absolute top-[266.8px] left-[115px] inline-block w-[438px] h-[141.2px] [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
-          Đến với Smartgram, bạn sẽ được cung cấp một công cụ đếm giờ dựa trên
+          Smartgram sẽ chung cấp cho bạn một công cụ đếm giờ dựa trên
           kỹ thuật Podomoro nhằm giúp bạn tận dụng triệt để thời gian học tập và
           tăng độ tập trung.
         </b>
@@ -63,14 +69,13 @@ const FeaturesAndBenefits = ({ className = "" }) => {
         </b>
         <b className="absolute top-[534px] left-[115px] inline-block w-[443px]">
           Thông qua Smartgram, chúng tôi muốn thay đổi góc nhìn của mọi người về
-          mạng xã hội. Đó không chỉ là nơi để giải trí mà còn là nơi chúng ta
-          được truy cập đến với đa dạng kiến thức mới mà thường không được dạy ở
-          trường lớp
+          mạng xã hội. Đó không chỉ là nơi để giải trí mà còn là nơi giúp chúng ta tiếp cận
+          với đa dạng kiến thức mới mà thường không có ở trường lớp.
         </b>
         <b className="absolute top-[336px] left-[115px] inline-block w-[440px]">
-          Trong Smart gram bạn có thể chia sẻ kiến thức qua việc tạo bài đăng
-          hoặc đăng lại, góp ý thông qua bình luận và nhiều tính năng tương tác
-          khác đang chờ bạn khám phá!
+          Trong Smartgram bạn có thể chia sẻ kiến thức qua việc tạo bài đăng, 
+          góp ý qua bình luận, tạo phòng học của riêng mình và còn nhiều 
+          tính năng khác đang chờ bạn khám phá!
         </b>
         <b className="absolute h-[7.48%] w-[38.36%] top-[4.14%] left-[29.87%] text-26xl inline-block text-limegreen text-justify [text-shadow:0px_4px_4px_rgba(96,_255,_131,_0.73)] [-webkit-text-stroke:1px_#9fff90]" >
           Mạng xã hội
