@@ -7,6 +7,10 @@
 @tailwind utilities;
 body {
   @apply leading-[normal] m-0;
+  transform: scale(0.8);
+  transform-origin: 0 0; /* Đảm bảo thu nhỏ từ góc trên bên trái */
+  width: 125%; /* Để bù đắp cho việc thu nhỏ, bạn có thể cần điều chỉnh chiều rộng */
+  height: 125%;
 }
 *,
 ::before,
