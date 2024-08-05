@@ -11,7 +11,7 @@ const GioiThieu3 = ({ className = "" }) => {
         tri thức.
       </b>
       <div className="absolute h-[23.46%] w-[57.18%] top-[0%] right-[0.98%] bottom-[76.54%] left-[42.3%] text-justify text-13xl">
-        <b className="absolute top-[13.94%] left-[35.26%] [text-shadow:0px_4px_3px_rgba(0,_0,_0,_0.75)]">
+        <b className="absolute top-[13.94%] left-[34.61%] [text-shadow:0px_4px_3px_rgba(0,_0,_0,_0.75)]">
           Kết Nối
         </b>
         <img
