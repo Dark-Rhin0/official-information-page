@@ -2,7 +2,6 @@ import FrameComponent1 from "../components/FrameComponent1";
 import KhungGopY from "../components/KhungGopY";
 import FeaturesAndBenefits from "../components/FeaturesAndBenefits";
 import FrameComponent from "../components/FrameComponent";
-import FrameComponent3 from "../components/FrameComponent3";
 
 const PluginFileCover = () => {
   return (
@@ -50,7 +49,6 @@ const PluginFileCover = () => {
         alt=""
         src="/ellipse-20.svg"
       />
-      {/*<FrameComponent3 />*/}
     </div>
   );
 };

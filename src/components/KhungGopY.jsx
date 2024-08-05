@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Property1Default from "./Property1Default";
 import HyNiLnKinCaBnV from "./HyNiLnKinCaBnV";
 import PropTypes from "prop-types";
-import { database } from "../firebaseConfig"; // Đảm bảo đường dẫn đúng
+import { database } from "../firebaseConfig";
 import { ref, push } from "firebase/database";
 import "./KhungGopY.css";
 
