@@ -18,7 +18,7 @@ const FrameComponent = ({ className = "" }) => {
         alt=""
         src="/logo-ko-nn-1@2x.png"
       />
-      <b className="absolute top-[56px] left-[calc(50%_-_336.5px)] text-17xl text-gold text-justify [text-shadow:0px_4px_4px_rgba(255,_224,_114,_0.5)]" id='home'>
+      <b className="absolute top-[56px] left-[calc(50%_-_336.5px)] text-17xl text-gold text-justify [text-shadow:0px_4px_4px_rgba(255,_224,_114,_0.5)]">
         Smartgram - Khi Học Tập Là Tương Lai
       </b>
     </div>

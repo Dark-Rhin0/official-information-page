@@ -49,6 +49,18 @@ const PluginFileCover = () => {
         alt=""
         src="/ellipse-20.svg"
       />
+      <img
+        className="absolute top-[-100px] left-[calc(50%-150px)] w-[300px] h-[300px] opacity-0"
+        alt="Hidden Image"
+        src="/del.png"
+        id="home"
+      />
+      <img
+        className="absolute top-[940px] left-[calc(50%-150px)] w-[1px] h-[1px] opacity-0"
+        alt="Hidden Image"
+        src="/del.png"
+        id="features"
+      />
     </div>
   );
 };
