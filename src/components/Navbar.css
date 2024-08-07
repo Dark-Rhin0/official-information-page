@@ -43,7 +43,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 10px
+    gap: 10px;
 }
 
 .navbar-menu li {
@@ -54,37 +54,62 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
-    /* Điều chỉnh kích thước chữ tại đây */
+    padding: 5px;
+    position: relative;
 }
 
-/* Nếu bạn muốn thay đổi kích thước chữ cho riêng biệt từng mục, ví dụ: */
-.navbar-menu li a[href="#home"] {
-    font-size: 20px;
-    /* Kích thước chữ cho Trang Chủ */
+.navbar-menu a:not(.login-button)::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-.navbar-menu li a[href="#features"] {
-    font-size: 20px;
-    /* Kích thước chữ cho Tính năng */
-}
-
-.navbar-menu li a[href="#feedback"] {
-    font-size: 20px;
-    /* Kích thước chữ cho Góp Ý */
-}
-
-.navbar-menu li a[href="#info"] {
-    font-size: 20px;
-    /* Kích thước chữ cho Thông Tin */
+.navbar-menu a:hover:not(.login-button)::after,
+.navbar-menu a.active:not(.login-button)::after {
+    width: 100%;
 }
 
 .login-button {
-    font-size: 20px;
-    /* Kích thước chữ cho log in */
+    font-size: 22px; /* Increase the font size */
     background-color: blue;
-    padding: 5px 10px;
+    padding: 8px 14px; /* Increase the padding to maintain the aspect ratio */
     border-radius: 5px;
     color: white;
+    position: relative; /* Required for tooltip positioning */
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    transform: scale(1.1); /* Increase the size of the button on hover */
+}
+
+.login-button::after {
+    content: "Join us to see more";
+    position: absolute;
+    top: 120%; /* Increase space below the button */
+    left: 50%;
+    transform: translateX(-60%); /* Adjust to center and shift left */
+    background-color: white;
+    color: #333;
+    padding: 10px 20px; /* Increase padding for larger tooltip */
+    border-radius: 5px;
+    font-size: 16px; /* Increase font size */
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    visibility: hidden; /* Hide by default */
+    z-index: 1001; /* Ensure the tooltip is above other elements */
+}
+
+.login-button:hover::after {
+    opacity: 1;
+    visibility: visible; /* Show on hover */
 }
 
 .nav-menu {

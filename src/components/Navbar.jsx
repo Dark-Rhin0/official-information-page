@@ -3,6 +3,7 @@ import './Navbar.css';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [activeLink, setActiveLink] = useState('#home'); // Set default active link to '#home'
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,6 +30,10 @@ const Navbar = () => {
         window.location.reload();
     };
 
+    const handleLinkClick = (link) => {
+        setActiveLink(link);
+    };
+
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="navbar-logo" onClick={handleLogoClick}>
@@ -36,14 +41,53 @@ const Navbar = () => {
                 <span>Smartgram</span>
             </div>
             <ul className="navbar-menu">
-                <li><a href="#home">Trang Chủ</a></li>
-                <li><a href="#features">Tính năng</a></li>
-                <li><a href="#feedback">Góp Ý</a></li>
-                <li><a href="#info">Thông Tin</a></li>
-                <li><a href="https://imaginative-mosquito-tienphat-e05715c6.koyeb.app/" className="login-button">log in</a></li>
+                <li>
+                    <a
+                        href="#home"
+                        className={activeLink === '#home' ? 'active' : ''}
+                        onClick={() => handleLinkClick('#home')}
+                    >
+                        Trang Chủ
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#features"
+                        className={activeLink === '#features' ? 'active' : ''}
+                        onClick={() => handleLinkClick('#features')}
+                    >
+                        Tính năng
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#feedback"
+                        className={activeLink === '#feedback' ? 'active' : ''}
+                        onClick={() => handleLinkClick('#feedback')}
+                    >
+                        Góp Ý
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#info"
+                        className={activeLink === '#info' ? 'active' : ''}
+                        onClick={() => handleLinkClick('#info')}
+                    >
+                        Thông Tin
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://imaginative-mosquito-tienphat-e05715c6.koyeb.app/"
+                        className="login-button"
+                    >
+                        log in
+                    </a>
+                </li>
             </ul>
         </nav>
     );
-}
+};
 
 export default Navbar;
