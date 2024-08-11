@@ -47,7 +47,7 @@ const FrameComponent1 = ({ className = "" }) => {
             src="/logo-0-nn-2@2x.png"
             style={{
               transition: 'transform 0.5s ease-in-out',
-              transformOrigin: 'center', // Đảm bảo ảnh xoay quanh tâm của nó
+              transformOrigin: 'center',
             }}
             onMouseOver={(e) => e.currentTarget.style.transform = 'rotate(360deg)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'rotate(0deg)'}
@@ -77,9 +77,20 @@ const FrameComponent1 = ({ className = "" }) => {
           rel="noopener noreferrer"
         >
           <img
-            className="absolute top-[78px] left-[292px] w-[30px] h-[30.1px] object-cover"
+            className="absolute top-[78px] left-[289px] w-[30px] h-[30.1px] object-cover rounded-full transition-transform duration-100 ease-in-out"
             alt=""
             src="/fblink@2x.png"
+            style={{
+              transition: 'all 0.1s ease-in-out',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.border = '2px solid #87df2c';
+              e.currentTarget.style.transform = 'scale(1.1)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.border = 'none';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           />
         </a>
         <a
@@ -88,9 +99,20 @@ const FrameComponent1 = ({ className = "" }) => {
           rel="noopener noreferrer"
         >
           <img
-            className="absolute top-[114px] left-[287px] w-[35px] h-[35px] object-cover"
+            className="absolute top-[114px] left-[287px] w-[35px] h-[35px] object-cover rounded-full transition-transform duration-100 ease-in-out"
             alt=""
             src="/removebgai-1721144744017-1@2x.png"
+            style={{
+              transition: 'all 0.1s ease-in-out',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.border = '2px solid #87df2c';
+              e.currentTarget.style.transform = 'scale(1.1)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.border = 'none';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           />
         </a>
         <a
@@ -99,9 +121,20 @@ const FrameComponent1 = ({ className = "" }) => {
           rel="noopener noreferrer"
         >
           <img
-            className="absolute top-[44px] left-[292px] w-[30px] h-[30.1px] object-cover"
+            className="absolute top-[44px] left-[289px] w-[30px] h-[30.1px] object-cover rounded-full transition-transform duration-100 ease-in-out"
             alt=""
             src="/fblink@2x.png"
+            style={{
+              transition: 'all 0.1s ease-in-out',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.border = '2px solid #87df2c';
+              e.currentTarget.style.transform = 'scale(1.1)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.border = 'none';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           />
         </a>
       </div>
