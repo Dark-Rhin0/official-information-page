@@ -22,8 +22,30 @@
 }
 
 .navbar-logo {
+    position: relative;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.comment-box {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust to position the comment box below the logo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.navbar-logo:hover .comment-box {
+    display: block;
 }
 
 .navbar-logo img {

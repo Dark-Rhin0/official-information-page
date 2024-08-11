@@ -3,15 +3,11 @@ import './Navbar.css';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [activeLink, setActiveLink] = useState('#home'); // Set default active link to '#home'
+    const [activeLink, setActiveLink] = useState('#home');
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 50);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -22,7 +18,6 @@ const Navbar = () => {
     }, []);
 
     useEffect(() => {
-        // Cuộn về đầu trang khi component được tải
         window.scrollTo(0, 0);
     }, []);
 
@@ -39,6 +34,7 @@ const Navbar = () => {
             <div className="navbar-logo" onClick={handleLogoClick}>
                 <img src="/logo-0-nn-2@2x.png" alt="Logo" />
                 <span>Smartgram</span>
+                <div className="comment-box">✋ Hello ✋</div>
             </div>
             <ul className="navbar-menu">
                 <li>
