@@ -22,7 +22,7 @@ const Property1Default = ({
     toast.success('Cảm ơn vì những đóng góp của bạn!', {
       position: "top-center",
       autoClose: 5000,
-      hideProgressBar: true, // Hide the progress bar
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
@@ -33,19 +33,19 @@ const Property1Default = ({
 
   return (
     <div
-      className={`w-[70px] h-[42px] text-center text-xl text-white font-quicksand ${className}`}
+      className={`relative w-[70px] h-[42px] text-center text-xl text-white font-quicksand ${className}`}
       style={property1DefaultStyle}
+      onClick={handleClick}
     >
       <ToastContainer />
       <img
-        className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] rounded-81xl max-w-full overflow-hidden max-h-full"
+        className="absolute inset-0 w-full h-full rounded-81xl max-w-full max-h-full object-cover"
         alt=""
         src="/rectangle-5.svg"
+        id="feedback"
       />
       <b
-        className="absolute h-[71.43%] w-[51.43%] top-[16.67%] left-[22.86%] inline-block [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.5)] cursor-pointer"
-        id="feedback"
-        onClick={handleClick}
+        className="absolute inset-0 flex items-center justify-center [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.5)] cursor-pointer"
       >
         Gửi
       </b>

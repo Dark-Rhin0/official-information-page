@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="navbar-logo" onClick={handleLogoClick}>
                 <img src="/logo-0-nn-2@2x.png" alt="Logo" />
                 <span>Smartgram</span>
-                <div className="comment-box">✋ Hello ✋</div>
+                <div className="comment-box">👋 Hello 👋</div>
             </div>
             <ul className="navbar-menu">
                 <li>
