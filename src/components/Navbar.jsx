@@ -8,25 +8,47 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
+            updateActiveLink();
+        };
+
+        const updateActiveLink = () => {
+            const sections = document.querySelectorAll('section[id]');
+            let currentSectionId = '';
+
+            sections.forEach(section => {
+                const { offsetTop, offsetHeight } = section;
+                if (window.scrollY >= offsetTop - 50 && window.scrollY < offsetTop + offsetHeight - 50) {
+                    currentSectionId = `#${section.getAttribute('id')}`;
+                }
+            });
+
+            if (currentSectionId && activeLink !== currentSectionId) {
+                setActiveLink(currentSectionId);
+                window.history.replaceState(null, null, currentSectionId); // Update URL without scrolling
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [activeLink]);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0); // Ensure page starts at the top on load
     }, []);
 
     const handleLogoClick = () => {
         window.location.reload();
     };
 
-    const handleLinkClick = (link) => {
+    const handleLinkClick = (event, link) => {
+        event.preventDefault();
         setActiveLink(link);
+
+        const section = document.querySelector(link);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            window.history.pushState(null, null, link); // Update URL
+        }
     };
 
     return (
@@ -41,7 +63,7 @@ const Navbar = () => {
                     <a
                         href="#home"
                         className={activeLink === '#home' ? 'active' : ''}
-                        onClick={() => handleLinkClick('#home')}
+                        onClick={(event) => handleLinkClick(event, '#home')}
                     >
                         Trang Chủ
                     </a>
@@ -50,7 +72,7 @@ const Navbar = () => {
                     <a
                         href="#features"
                         className={activeLink === '#features' ? 'active' : ''}
-                        onClick={() => handleLinkClick('#features')}
+                        onClick={(event) => handleLinkClick(event, '#features')}
                     >
                         Tính năng
                     </a>
@@ -59,7 +81,7 @@ const Navbar = () => {
                     <a
                         href="#feedback"
                         className={activeLink === '#feedback' ? 'active' : ''}
-                        onClick={() => handleLinkClick('#feedback')}
+                        onClick={(event) => handleLinkClick(event, '#feedback')}
                     >
                         Góp Ý
                     </a>
@@ -68,7 +90,7 @@ const Navbar = () => {
                     <a
                         href="#info"
                         className={activeLink === '#info' ? 'active' : ''}
-                        onClick={() => handleLinkClick('#info')}
+                        onClick={(event) => handleLinkClick(event, '#info')}
                     >
                         Thông Tin
                     </a>
