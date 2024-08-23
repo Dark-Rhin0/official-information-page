@@ -115,7 +115,9 @@ const FeaturesAndBenefits = ({ className = "" }) => {
         onClick={triggerConfetti}
       >
         <img
-          className="absolute top-[0px] left-[0px] rounded-81xl w-[269px] h-[119px] transition-shadow duration-50 hover:shadow-[0px_7px_10px_rgba(0,255,0,0.9)]"
+          className="absolute top-[0px] left-[0px] rounded-81xl w-[269px] h-[119px] transition-shadow duration-50 hover:shadow-[0px_7px_10px_rgba(255,_225,_71,_0.9)]"
+          style={{
+            background: "linear-gradient(to right, #facc15, #fbbf24, #f59e0b)",}}
           alt=""
           src="/rectangle-15.svg"
         />
