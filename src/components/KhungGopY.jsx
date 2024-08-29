@@ -14,12 +14,12 @@ const KhungGopY = ({ className = "" }) => {
   };
 
   const saveFeedback = () => {
-    const feedbackRef = ref(database, 'feedbacks');
+    const feedbackRef = ref(database, "feedbacks");
     push(feedbackRef, { text: feedback })
       .then(() => {
         console.log("Góp ý đã được lưu!");
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Lỗi khi lưu góp ý:", error);
       });
   };

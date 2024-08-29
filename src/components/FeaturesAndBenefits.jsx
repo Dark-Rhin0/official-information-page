@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useRef } from "react";
-import confetti from 'canvas-confetti';
-import './FeaturesAndBenefits.css';
+import confetti from "canvas-confetti";
+import "./FeaturesAndBenefits.css";
 
 const FeaturesAndBenefits = ({ className = "" }) => {
   const targetRef = useRef(null);
@@ -10,7 +10,7 @@ const FeaturesAndBenefits = ({ className = "" }) => {
     if (targetRef.current) {
       const rect = targetRef.current.getBoundingClientRect();
       const originX = (rect.left + rect.width / 2) / window.innerWidth;
-      const originY = (rect.top + rect.height / 2 -10) / window.innerHeight;
+      const originY = (rect.top + rect.height / 2 - 10) / window.innerHeight;
 
       // Trigger confetti in a circular pattern
       for (let angle = 0; angle < 360; angle += 30) {
@@ -19,7 +19,7 @@ const FeaturesAndBenefits = ({ className = "" }) => {
           spread: 70,
           particleCount: 15,
           origin: { x: originX, y: originY },
-          colors: ['#fff', '#87df2c', '#3357FF'],
+          colors: ["#fff", "#87df2c", "#3357FF"],
           startVelocity: 35,
         });
       }
@@ -48,10 +48,10 @@ const FeaturesAndBenefits = ({ className = "" }) => {
         />
         <div className="absolute top-[89.3px] left-[117px] w-[451px] h-[162.8px]">
           <b className="absolute top-[-6.3px] left-[0px] inline-block w-[451px] h-[217px] [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
-            Chúng tôi đã thêm vào smartgram một công cụ lịch để giúp bạn dễ dàng 
-            lên kế hoạch cho công việc học tập lâu dài. 
-            Ngoài ra, bạn còn có thể tạo danh sách công việc cần làm, 
-            để theo dõi và quản lý các nhiệm vụ quan trọng mà không bỏ sót chúng.
+            Chúng tôi đã thêm vào smartgram một công cụ lịch để giúp bạn dễ dàng
+            lên kế hoạch cho công việc học tập lâu dài. Ngoài ra, bạn còn có thể
+            tạo danh sách công việc cần làm, để theo dõi và quản lý các nhiệm vụ
+            quan trọng mà không bỏ sót chúng.
           </b>
         </div>
         <b className="absolute top-[4.71%] left-[15.5%] text-26xl font-quantico text-forestgreen text-justify [text-shadow:0px_4px_4px_rgba(211,_0,_0,_0.73)] [-webkit-text-stroke:1px_#ff9090]">
@@ -73,9 +73,9 @@ const FeaturesAndBenefits = ({ className = "" }) => {
           cao hiệu quả trong công việc.
         </b>
         <b className="absolute top-[266.8px] left-[115px] inline-block w-[438px] h-[141.2px] [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
-          Smartgram sẽ chung cấp cho bạn một công cụ đếm giờ dựa trên
-          kỹ thuật Podomoro nhằm giúp bạn tận dụng triệt để thời gian học tập và
-          tăng độ tập trung.
+          Smartgram sẽ chung cấp cho bạn một công cụ đếm giờ dựa trên kỹ thuật
+          Podomoro nhằm giúp bạn tận dụng triệt để thời gian học tập và tăng độ
+          tập trung.
         </b>
       </div>
       <div className="absolute top-[324px] left-[165px] w-[683px] h-[775px]">
@@ -87,15 +87,15 @@ const FeaturesAndBenefits = ({ className = "" }) => {
         </b>
         <b className="absolute top-[534px] left-[115px] inline-block w-[443px]">
           Thông qua Smartgram, chúng tôi muốn thay đổi góc nhìn của mọi người về
-          mạng xã hội. Đó không chỉ là nơi để giải trí mà còn là nơi giúp chúng ta tiếp cận
-          với đa dạng kiến thức mới mà thường không có ở trường lớp.
+          mạng xã hội. Đó không chỉ là nơi để giải trí mà còn là nơi giúp chúng
+          ta tiếp cận với đa dạng kiến thức mới mà thường không có ở trường lớp.
         </b>
         <b className="absolute top-[336px] left-[115px] inline-block w-[440px]">
-          Trong Smartgram bạn có thể chia sẻ kiến thức qua việc tạo bài đăng, 
-          góp ý qua bình luận, tạo phòng học của riêng mình và còn nhiều 
-          tính năng khác đang chờ bạn khám phá!
+          Trong Smartgram bạn có thể chia sẻ kiến thức qua việc tạo bài đăng,
+          góp ý qua bình luận, tạo phòng học của riêng mình và còn nhiều tính
+          năng khác đang chờ bạn khám phá!
         </b>
-        <b className="absolute h-[7.48%] w-[38.36%] top-[4.14%] left-[29.87%] text-26xl inline-block text-limegreen text-justify [text-shadow:0px_4px_4px_rgba(96,_255,_131,_0.73)] [-webkit-text-stroke:1px_#9fff90]" >
+        <b className="absolute h-[7.48%] w-[38.36%] top-[4.14%] left-[29.87%] text-26xl inline-block text-limegreen text-justify [text-shadow:0px_4px_4px_rgba(96,_255,_131,_0.73)] [-webkit-text-stroke:1px_#9fff90]">
           Mạng xã hội
         </b>
       </div>
@@ -117,11 +117,12 @@ const FeaturesAndBenefits = ({ className = "" }) => {
         <img
           className="absolute top-[0px] left-[0px] rounded-81xl w-[269px] h-[119px] transition-shadow duration-50 hover:shadow-[0px_7px_10px_rgba(255,_225,_71,_0.9)]"
           style={{
-            background: "linear-gradient(to right, #facc15, #fbbf24, #f59e0b)",}}
+            background: "linear-gradient(to right, #facc15, #fbbf24, #f59e0b)",
+          }}
           alt=""
           src="/rectangle-15.svg"
         />
-        <b className="absolute top-[33px] left-[calc(50%_-_112.5px)] text-sweep-effect">
+        <b className="absolute top-[33px] left-[calc(50%_-_120.5px)] text-sweep-effect">
           Tính Năng
         </b>
       </div>

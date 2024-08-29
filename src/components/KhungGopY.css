@@ -1,15 +1,33 @@
 .feedback-input {
-    width: 559px; /* Điều chỉnh chiều rộng */
-    height: 22px; /* Điều chỉnh chiều cao */
-    background-color: rgb(145, 145, 145);
-    border: 2px solid transparent;
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  .feedback-input:focus {
-    box-shadow: 0 0 0 2px #007bff; /* Viền xanh dương khi nhấp vào */
-    outline: none;
-  }
+  width: 560px;
+  height: 24px;
+  background-color: rgba(145, 145, 145, 0.8);
+  border: 1.5px solid rgba(0, 0, 0, 0.6); /* Viền đen với độ mờ 60% */
+  border-radius: 4px; /* Thêm bo góc nhẹ */
+  padding: 0 10px; /* Thêm padding bên trong */
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  font-size: 16px; /* Điều chỉnh kích thước chữ phù hợp */
+}
+
+.feedback-input:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  background-color: rgba(160, 160, 160, 0.9);
+  border-color: rgb(0, 123, 255);
+  transform: translateY(-2.5px); /* Giảm nhẹ hiệu ứng nâng lên */
+  outline: none;
+}
+
 .feedback-input::placeholder {
-color: #ffffffda; /* Màu chữ placeholder */
+  color: rgba(255, 255, 255, 0.6);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.feedback-input:focus::placeholder {
+  opacity: 0.4;
+}
+
+.feedback-input:hover {
+  background-color: rgba(155, 155, 155, 0.9);
+  border-color: rgba(255, 255, 255, 0.3);
 }
