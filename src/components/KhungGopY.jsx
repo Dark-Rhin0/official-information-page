@@ -38,7 +38,7 @@ const KhungGopY = ({ className = "" }) => {
       className={`absolute top-[2576px] left-[539px] w-[842px] h-[246px] text-center text-6xl font-quicksand ${className}`}
     >
       <img
-        className="absolute top-[0px] left-[0px] rounded-6xl w-[842px] h-[246px]"
+        className="absolute top-[px] left-[0px] rounded-6xl w-[842px] h-[246px]"
         alt=""
         src="/rectangle-3.svg"
       />
