@@ -51,7 +51,7 @@
 .navbar-logo:hover .comment-box {
   opacity: 1;
   transform: translateX(-50%) scale(1);
-  bottom: -47px;
+  bottom: -50px;
 }
 
 .navbar-logo img {

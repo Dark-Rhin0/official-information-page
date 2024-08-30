@@ -2,50 +2,60 @@
 
 /* Các hiệu ứng nổi */
 @keyframes float1 {
-  0% {
-    transform: translateY(0);
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(2deg);
   }
   50% {
-    transform: translateY(15px);
+    transform: translateY(-30px) rotate(-2deg);
   }
-  100% {
-    transform: translateY(0);
+  75% {
+    transform: translateY(-15px) rotate(1deg);
   }
 }
 
 @keyframes float2 {
-  0% {
-    transform: translateY(0);
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
+    transform: translateY(-25px) scale(1.05);
   }
 }
 
 @keyframes float3 {
-  0% {
-    transform: translateY(0);
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-35px) translateX(-10px);
   }
-  100% {
-    transform: translateY(0);
+  75% {
+    transform: translateY(-20px) translateX(5px);
   }
 }
 
 @keyframes float4 {
-  0% {
-    transform: translateY(0);
+  0%,
+  100% {
+    transform: translateY(0) skew(0deg);
+  }
+  25% {
+    transform: translateY(-25px) skew(2deg);
   }
   50% {
-    transform: translateY(15px);
+    transform: translateY(-40px) skew(-2deg);
   }
-  100% {
-    transform: translateY(0);
+  75% {
+    transform: translateY(-25px) skew(1deg);
   }
 }
 
@@ -56,19 +66,19 @@
 }
 
 .floating-effect1 {
-  animation-name: float1;
+  animation: float1 6s ease-in-out infinite;
 }
 
 .floating-effect2 {
-  animation-name: float2;
+  animation: float2 7s ease-in-out infinite;
 }
 
 .floating-effect3 {
-  animation-name: float3;
+  animation: float3 8s ease-in-out infinite;
 }
 
 .floating-effect4 {
-  animation-name: float4;
+  animation: float4 9s ease-in-out infinite;
 }
 
 /* Hiệu ứng ánh sáng quét qua chữ màu vàng */
