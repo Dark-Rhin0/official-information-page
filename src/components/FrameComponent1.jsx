@@ -17,7 +17,7 @@ const FrameComponent1 = ({ className = "" }) => {
         spread: 55,
         particleCount: 10,
         origin: { x: originX, y: originY },
-        colors: ['#fff', '#87df2c', '#3357FF'],
+        colors: ["#fff", "#87df2c", "#3357FF"],
         startVelocity: 30,
       });
     }
@@ -33,11 +33,11 @@ const FrameComponent1 = ({ className = "" }) => {
           onClick={handleClick}
           className="absolute top-[77px] left-[169px] w-[70px] h-[70px] border-none bg-transparent p-0"
           style={{
-            position: 'relative',
-            display: 'inline-block',
-            cursor: 'pointer',
-            top: '77px',
-            left: '0px',
+            position: "relative",
+            display: "inline-block",
+            cursor: "pointer",
+            top: "77px",
+            left: "0px",
           }}
         >
           <img
@@ -46,11 +46,15 @@ const FrameComponent1 = ({ className = "" }) => {
             alt=""
             src="/logo-0-nn-2@2x.png"
             style={{
-              transition: 'transform 0.5s ease-in-out',
-              transformOrigin: 'center',
+              transition: "transform 0.5s ease-in-out",
+              transformOrigin: "center",
             }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'rotate(360deg)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'rotate(0deg)'}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "rotate(360deg)")
+            }
+            onMouseOut={(e) =>
+              (e.currentTarget.style.transform = "rotate(0deg)")
+            }
           />
         </button>
         <b className="absolute top-[45px] left-[39px]">
@@ -75,66 +79,36 @@ const FrameComponent1 = ({ className = "" }) => {
           href="https://www.facebook.com/profile.php?id=100064682389065"
           target="_blank"
           rel="noopener noreferrer"
+          className="group"
         >
           <img
-            className="absolute top-[78px] left-[289px] w-[30px] h-[30.1px] object-cover rounded-full transition-transform duration-100 ease-in-out"
+            className="absolute top-[78px] left-[289px] w-[30px] h-[30.1px] object-cover rounded-full transition-all duration-300 ease-in-out group-hover:shadow-[0_0_15px_#87df2c] group-hover:-translate-y-1"
             alt=""
             src="/fblink@2x.png"
-            style={{
-              transition: 'all 0.1s ease-in-out',
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.border = '2px solid #87df2c';
-              e.currentTarget.style.transform = 'scale(1.1)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.border = 'none';
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
           />
         </a>
         <a
           href="https://thpttranphu.hcm.edu.vn/"
           target="_blank"
           rel="noopener noreferrer"
+          className="group"
         >
           <img
-            className="absolute top-[114px] left-[287px] w-[35px] h-[35px] object-cover rounded-full transition-transform duration-100 ease-in-out"
+            className="absolute top-[116px] left-[287px] w-[35px] h-[35px] object-cover rounded-full transition-all duration-300 ease-in-out group-hover:shadow-[0_0_15px_#87df2c] group-hover:-translate-y-1"
             alt=""
             src="/removebgai-1721144744017-1@2x.png"
-            style={{
-              transition: 'all 0.1s ease-in-out',
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.border = '2px solid #87df2c';
-              e.currentTarget.style.transform = 'scale(1.1)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.border = 'none';
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
           />
         </a>
         <a
           href="https://www.facebook.com/tienphat.nguyen.5209000"
           target="_blank"
           rel="noopener noreferrer"
+          className="group"
         >
           <img
-            className="absolute top-[44px] left-[289px] w-[30px] h-[30.1px] object-cover rounded-full transition-transform duration-100 ease-in-out"
+            className="absolute top-[40px] left-[289px] w-[30px] h-[30.1px] object-cover rounded-full transition-all duration-300 ease-in-out group-hover:shadow-[0_0_15px_#87df2c] group-hover:-translate-y-1"
             alt=""
             src="/fblink@2x.png"
-            style={{
-              transition: 'all 0.1s ease-in-out',
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.border = '2px solid #87df2c';
-              e.currentTarget.style.transform = 'scale(1.1)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.border = 'none';
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
           />
         </a>
       </div>

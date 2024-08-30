@@ -115,10 +115,10 @@
 }
 
 .login-button {
-  font-size: 22px;
+  font-size: 24px; /* Tăng kích thước chữ */
+  padding: 12px 30px; /* Tăng padding để nút to hơn */
   background: linear-gradient(45deg, #4facfe, #00f2fe);
   border: none;
-  padding: 10px 25px;
   border-radius: 50px;
   color: white;
   position: relative;
@@ -129,6 +129,7 @@
 
 .login-button:hover {
   animation: pulse 1.5s infinite;
+  transform: scale(1.05); /* Tăng nhẹ kích thước khi hover */
 }
 
 @keyframes pulse {
@@ -149,7 +150,7 @@
 .login-button::after {
   content: "Join us to see more";
   position: absolute;
-  bottom: -45px;
+  bottom: -50px; /* Điều chỉnh vị trí để phù hợp với kích thước mới của nút */
   left: 50%;
   transform: translateX(-50%) scale(0);
   background-color: rgba(255, 255, 255, 0.9);
@@ -165,7 +166,7 @@
 .login-button:hover::after {
   opacity: 1;
   transform: translateX(-50%) scale(1);
-  bottom: -55px;
+  bottom: -60px;
 }
 
 .nav-menu {
