@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,16 +10,19 @@ const Property1Default = ({
   property1DefaultLeft = "0px",
   onClick,
 }) => {
-  const property1DefaultStyle = useMemo(() => {
-    return {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const property1DefaultStyle = useMemo(
+    () => ({
       position: property1DefaultPosition,
       top: property1DefaultTop,
       left: property1DefaultLeft,
-    };
-  }, [property1DefaultPosition, property1DefaultTop, property1DefaultLeft]);
+    }),
+    [property1DefaultPosition, property1DefaultTop, property1DefaultLeft]
+  );
 
   const handleClick = () => {
-    toast.success('Cảm ơn vì những đóng góp của bạn!', {
+    toast.success("Cảm ơn vì những đóng góp của bạn!", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: true,
@@ -33,19 +36,19 @@ const Property1Default = ({
 
   return (
     <div
-      className={`relative w-[70px] h-[42px] text-center text-xl text-white font-quicksand ${className}`}
+      className={`relative w-[70px] h-[42px] text-center text-xl font-quicksand ${className} 
+        transition-all duration-300 ease-in-out rounded-full overflow-hidden 
+        bg-gradient-to-r from-blue-600 to-blue-900 hover:from-blue-700 hover:to-blue-950
+        ${isHovered ? "shadow-[0_0_15px_rgba(59,130,246,0.7)]" : "shadow-md"}`}
       style={property1DefaultStyle}
       onClick={handleClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <ToastContainer />
-      <img
-        className="absolute inset-0 w-full h-full rounded-81xl max-w-full max-h-full object-cover"
-        alt=""
-        src="/rectangle-5.svg"
-        id="feedback"
-      />
       <b
-        className="absolute inset-0 flex items-center justify-center [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.5)] cursor-pointer"
+        className={`absolute inset-0 flex items-center justify-center cursor-pointer text-white 
+        transition-all duration-300 ${isHovered ? "scale-110" : ""}`}
       >
         Gửi
       </b>
@@ -55,13 +58,9 @@ const Property1Default = ({
 
 Property1Default.propTypes = {
   className: PropTypes.string,
-
-  /** Style props */
   property1DefaultPosition: PropTypes.string,
   property1DefaultTop: PropTypes.string,
   property1DefaultLeft: PropTypes.string,
-
-  /** Prop để xử lý nhấp chuột */
   onClick: PropTypes.func,
 };
 
