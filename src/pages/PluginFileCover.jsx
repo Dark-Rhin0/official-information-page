@@ -10,6 +10,7 @@ const PluginFileCover = () => {
         className="absolute top-[2171px] left-[39px] w-[508.3px] h-[452.3px] object-contain"
         alt=""
         src="/ellipse-13.svg"
+        id="feedback"
       />
       <img
         className="absolute top-[2193px] left-[1431px] w-[451.1px] h-[380.9px] object-contain"
